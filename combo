@@ -40,16 +40,12 @@ try:
         tree.off()
         sleep(.5)
         tree.star.on()
-        tree.baubles.off()
         reds_on(leds)
         sleep(.5)
-        tree.baubles.off()
         greens_on(leds)
         sleep(.5)
-        tree.baubles.off()
         reds_on(leds)
         sleep(.5)
-        tree.baubles.off()
         greens_on(leds)
         sleep(.5)
         tree.off()
@@ -58,6 +54,7 @@ try:
         sleep(.5)
         tree.off()
         sleep(.5)
+
 except:
         tree.star.on()
 
