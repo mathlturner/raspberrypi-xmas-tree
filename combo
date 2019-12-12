@@ -65,9 +65,9 @@ try:
         sleep(.5)
         bottom_on(leds)
         sleep(.5)
-        mid_on
+        mid_on(leds)
         sleep(.5)
-        top_on
+        top_on(leds)
         sleep(.5)
         star.on()
         sleep(.5)
