@@ -15,6 +15,15 @@ def reds_on(leds):
 def greens_on(leds):
     for led in [0, 2, 5, 7, 9]:
         leds[led].on()
+def bottom_on(leds):
+    for led in [0, 1, 2, 3]:
+        leds[led].on()
+def mid_on(leds):
+    for led in [4, 5, 6, 7]:
+        leds[led].on()
+def top_on(leds):
+    for led in [8, 9]:
+        leds[led].on()
 
 tree = ChristmasTree()
 leds = tree.leds
@@ -40,16 +49,12 @@ try:
         tree.off()
         sleep(.5)
         tree.star.on()
-        tree.baubles.off()
         reds_on(leds)
         sleep(.5)
-        tree.baubles.off()
         greens_on(leds)
         sleep(.5)
-        tree.baubles.off()
         reds_on(leds)
         sleep(.5)
-        tree.baubles.off()
         greens_on(leds)
         sleep(.5)
         tree.off()
@@ -58,6 +63,21 @@ try:
         sleep(.5)
         tree.off()
         sleep(.5)
+        bottom_on(leds)
+        sleep(.5)
+        mid_on(leds)
+        sleep(.5)
+        top_on(leds)
+        sleep(.5)
+        star.on()
+        sleep(.5)
+        tree.off()
+        sleep(.5)
+        tree.on()
+        sleep(.5)
+        tree.off()
+        sleep(.5)
+        
 except:
         tree.star.on()
 
