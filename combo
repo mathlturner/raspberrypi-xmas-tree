@@ -107,8 +107,6 @@ try:
         sleep(.5)
         bottom_off(leds)
         sleep(.5)
-        tree.off()
-        sleep(.5)
         tree.on()
         sleep(.5)
         tree.off()
