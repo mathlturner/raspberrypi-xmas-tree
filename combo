@@ -9,7 +9,7 @@ def rev_on(leds):
     for led in [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]:
         leds[led].on()
         sleep(.2)
- def fwd_off(leds):
+def fwd_off(leds):
     for led in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
         leds[led].off()
         sleep(.2)   
@@ -119,11 +119,12 @@ try:
         tree.off()
         sleep(.5)
         tree.on()
+        sleep(.5)
         fwd_off(leds)
         sleep(.5)
         tree.on()
         sleep(.5)
-        tree.off()
+        rev_off(leds)
         sleep(.5)
         tree.on()
         sleep(.5)
