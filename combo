@@ -24,6 +24,15 @@ def mid_on(leds):
 def top_on(leds):
     for led in [8, 9]:
         leds[led].on()
+def bottom_off(leds):
+    for led in [0, 1, 2, 3]:
+        leds[led].off()
+def mid_off(leds):
+    for led in [4, 5, 6, 7]:
+        leds[led].off()
+def top_off(leds):
+    for led in [8, 9]:
+        leds[led].off()
 
 tree = ChristmasTree()
 leds = tree.leds
@@ -89,6 +98,14 @@ try:
         mid_on(leds)
         sleep(.5)
         bottom_on(leds)
+        sleep(.5)
+        tree.star.off()
+        sleep(.5)
+        top_off(leds)
+        sleep(.5)
+        mid_off(leds)
+        sleep(.5)
+        bottom_off(leds)
         sleep(.5)
         tree.off()
         sleep(.5)
