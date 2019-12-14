@@ -147,7 +147,7 @@ try:
         greenants_on(leds)
         sleep(.2)
         tree.star.on()
-        sleep(.2)
+        sleep(.5)
         tree.off()
         sleep(.5)
         tree.on()
