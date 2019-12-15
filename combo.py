@@ -63,7 +63,7 @@ def random(leds):
     for led in leds:
 		led.source_delay = 0.1
 		led.source = random_values()
-		sleep(5)
+	sleep(5)
 
 tree = ChristmasTree(pwm=True)
 leds = tree.leds
@@ -182,7 +182,7 @@ try:
         tree.off()
         sleep(.5)
         random(leds)
-        sleep(5)
+        sleep(.5)
         tree.off()
         sleep(.5)
         tree.on()
