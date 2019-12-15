@@ -1,5 +1,7 @@
 from christmastree import ChristmasTree
+from gpiozero.tools import random_values
 from time import sleep
+from signal import pause
 
 def fwd_on(leds):
     for led in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
@@ -57,8 +59,12 @@ def mid_off(leds):
 def top_off(leds):
     for led in [8, 9]:
         leds[led].off()
+def random(leds):
+    for led in leds:
+		led.source_delay = 0.1
+		led.source = random_values()
 
-tree = ChristmasTree()
+tree = ChristmasTree(pwm=True)
 leds = tree.leds
 
 try:
@@ -173,6 +179,12 @@ try:
         tree.on()
         sleep(.5)
         tree.off()
+        sleep(.5)
+        random(leds)
+        sleep(5)
+        tree.off()
+        sleep(.5)
+        tree.on()
         sleep(.5)
         
 except:
