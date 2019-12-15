@@ -168,6 +168,8 @@ try:
         sleep(.01)
         redants_off(leds)
         sleep(.01)
+        tree.star.off()
+        sleep(.5)
         tree.on()
         sleep(.5)
         tree.off()
