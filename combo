@@ -31,6 +31,14 @@ def greenants_on(leds):
     for led in [0, 2, 5, 7, 9]:
         leds[led].on()
         sleep(.2)
+def redants_off(leds):
+    for led in [1, 3, 4, 6, 8]:
+        leds[led].off()
+        sleep(.2)
+def greenants_off(leds):
+    for led in [0, 2, 5, 7, 9]:
+        leds[led].off()
+        sleep(.2)        
 def bottom_on(leds):
     for led in [0, 1, 2, 3]:
         leds[led].on()
@@ -150,6 +158,16 @@ try:
         sleep(.5)
         tree.off()
         sleep(.5)
+        tree.on()
+        sleep(.5)
+        tree.off()
+        sleep(.5)
+        tree.on()
+        sleep(.5)
+        greenants_off(leds)
+        sleep(.01)
+        redants_off(leds)
+        sleep(.01)
         tree.on()
         sleep(.5)
         tree.off()
