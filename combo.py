@@ -57,6 +57,9 @@ def mid_off(leds):
 def top_off(leds):
     for led in [8, 9]:
         leds[led].off()
+def flash(leds):
+        tree.on(.1)
+        tree.off(.1)
 
 tree = ChristmasTree()
 leds = tree.leds
@@ -174,6 +177,7 @@ try:
         sleep(.5)
         tree.off()
         sleep(.5)
+        flash(2)
         
 except:
         tree.star.on()
